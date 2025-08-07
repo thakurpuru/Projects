@@ -1,0 +1,208 @@
+body {
+    text-align: center;
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 20px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+h2 {
+    color: #333;
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+}
+
+h3 {
+    color: #555;
+    font-size: 1.2rem;
+    margin-top: 0;
+    margin-bottom: 30px;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    height: 250px;
+    width: 300px;
+    perspective: 1000px;
+}
+
+.back {
+    height: 100px;
+    width: 100px;
+    border: 5px solid black;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.back:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.3);
+}
+
+.back:active {
+    transform: scale(0.95);
+}
+
+.box {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+    background-color: white;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+#btn1 {
+    background-color: rgb(158, 26, 72);
+}
+
+#btn2 {
+    background-color: rgba(0, 128, 0, 0.621);
+}
+
+#btn3 {
+    background-color: rgba(217, 76, 51, 0.715);
+}
+
+#btn4 {
+    background-color: rgb(0, 136, 255);
+}
+
+/* Animation for button presses */
+.pressed {
+    transform: scale(0.9);
+    box-shadow: 0 0 20px white;
+    opacity: 0.8;
+}
+
+/* Game over animation */
+.game-over {
+    background-color: red;
+    opacity: 0.8;
+}
+
+/* Score display */
+.score {
+    margin-top: 20px;
+    font-size: 1.5rem;
+    color: #333;
+    font-weight: bold;
+}
+
+/* Responsive design */
+@media (max-width: 500px) {
+    .container {
+        gap: 15px;
+        width: 250px;
+    }
+    
+    .back {
+        height: 80px;
+        width: 80px;
+    }
+    
+    h2 {
+        font-size: 2rem;
+    }
+    
+    h3 {
+        font-size: 1rem;
+    }
+}
+
+/* Add these styles to your existing CSS */
+
+.game-container {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.controls {
+    margin: 20px 0;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.game-btn {
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: white;
+    background-color: #4a6fa5;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.game-btn:hover {
+    background-color: #3a5a8f;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+}
+
+.game-btn:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.game-btn:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+    transform: none;
+}
+
+#startBtn {
+    background-color: #4CAF50;
+}
+
+#startBtn:hover:not(:disabled) {
+    background-color: #3e8e41;
+}
+
+#resetBtn {
+    background-color: #f44336;
+}
+
+#resetBtn:hover:not(:disabled) {
+    background-color: #d32f2f;
+}
+
+.message {
+    margin-top: 20px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    min-height: 24px;
+    color: #4a6fa5;
+}
+.back.disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    pointer-events: none;
+}
+
+.back.disabled:hover {
+    transform: none;
+    box-shadow: none;
+}
+
+/* Add this to your existing button styles */
+.back {
+    transition: opacity 0.3s ease, transform 0.2s ease;
+}
